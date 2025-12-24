@@ -71,6 +71,50 @@
           <p class="hero-subtitle mt-2">
             <span class="typed" data-typed-items=" Graduate Student, Problem Solver, Data Driven, Innovative"></span>
           </p>
+          <!-- ===== Resume Button + Subtitle Styling (Hero Only) ===== -->
+<style>
+  /* Make hero subtitle white */
+  #hero .hero-subtitle,
+  #hero .typed {
+    color: #ffffff;
+  }
+
+  /* Resume Button Styling */
+  #hero .resume-btn {
+    display: inline-block;
+    margin-top: 15px;
+    height: 40px;
+    width: 170px;
+    line-height: 40px;
+    background-color: rgb(194, 212, 231);
+    font-size: 1rem;
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                0 6px 20px rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover Effect */
+  #hero .resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25),
+                0 10px 25px rgba(0, 0, 0, 0.22);
+  }
+
+  /* Click Effect */
+  #hero .resume-btn:active {
+    transform: scale(0.97);
+  }
+</style>
+
+<a href="assets/img/SaiPooja_Resume.pdf" download class="resume-btn">
+  <b>My Resume</b>
+</a>
+<!-- ===== End Resume Button ===== -->
+
         </div>
     
 
@@ -78,65 +122,7 @@
     </div>
   </div>
 </div>
- <!-- === Resume Section ======= -->
-<section id="download-resume" class="text-center py-3">
-
-  <style>
-    /* Title Styling */
-    #download-resume .resume-title {
-      font-size: 30px;
-      font-family: 'Open Sans', sans-serif;
-      color: #0b0b0b;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    /* Resume Button Styling */
-    #download-resume .resume-btn {
-      display: inline-block;
-      height: 40px;
-      width: 170px;
-      line-height: 40px;
-      background-color: rgb(194, 212, 231);
-      font-size: 1rem;
-      color: #000;
-      text-decoration: none;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
-                  0 6px 20px rgba(0, 0, 0, 0.19);
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Hover Effect */
-    #download-resume .resume-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25),
-                  0 10px 25px rgba(0, 0, 0, 0.22);
-    }
-
-    /* Click Effect */
-    #download-resume .resume-btn:active {
-      transform: scale(0.97);
-    }
-  </style>
-
-  <div style="text-align:center;">
-    <h2 class="resume-title">Download My Resume</h2>
-
-    <a href="assets/img/SaiPooja_Resume.pdf" download class="resume-btn">
-      <b>My Resume</b>
-    </a>
-  </div>
-
-</section>
-
-
-<!-- End Resume Section -->       
-          
+ 
         
   
         </div>
