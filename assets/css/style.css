@@ -9,6 +9,80 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* ================= ANIMATED BACKGROUND ================= */
+:root {
+  --primary: #6366f1;
+  --secondary: #a855f7;
+  --accent: #ec4899;
+}
+
+/* Animated Background Container */
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+/* Floating Shapes */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  animation: float 20s infinite ease-in-out;
+}
+
+.shape1 {
+  width: 500px;
+  height: 500px;
+  background: var(--primary);
+  top: -200px;
+  left: -200px;
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 400px;
+  height: 400px;
+  background: var(--secondary);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 5s;
+}
+
+.shape3 {
+  width: 350px;
+  height: 350px;
+  background: var(--accent);
+  top: 50%;
+  right: 10%;
+  animation-delay: 10s;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+  33% { 
+    transform: translate(150px, -150px) scale(1.2); 
+  }
+  66% { 
+    transform: translate(-150px, 150px) scale(0.8); 
+  }
+}
+
+/* Make body background dark to match */
+body {
+  background: #0f172a !important;
+}
+/* ================= END ANIMATED BACKGROUND ================= */
+
 body {
   background-color: #f5f5f5;
   color: #4e4e4e;
@@ -824,6 +898,47 @@ a:hover {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+/* ================= ABOUT SECTION TITLE ================= */
+
+#about .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-subtitle {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.about-line {
+  width: 140px;
+  height: 4px;
+  margin: 18px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+}
+
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -845,11 +960,11 @@ a:hover {
 }
 
 .skill-mf span {
-  color: #4e4e4e;
+  color: #ffffff;
 }
 
 .skill-mf .progress {
-  background-color: #cde1f8;
+  background-color: #bfd6f1;
   margin: 0.5rem 0 1.2rem 0;
   border-radius: 0;
   height: 0.7rem;
@@ -860,6 +975,559 @@ a:hover {
   background-color: #0078ff;
 }
 
+/* ================= SKILLS & EXPERTISE SECTION ================= */
+.skills-section {
+  padding: 80px 0;
+  background: transparent;
+}
+
+.skills-section .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-section .section-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skills-section .section-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.skills-section .line-mf {
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+  margin: 15px auto;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: center; /* Centers all cards */
+}
+
+.skill-card {
+  flex: 0 1 calc(33.333% - 20px); /* 3 cards per row */
+  min-width: 320px;
+  max-width: 400px;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+/* Skill Card */
+.skill-card {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.skill-card:hover::before {
+  left: 100%;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  border-color: #6366f1;
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* Skill Icon */
+.skill-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Skill Card Title */
+.skill-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover h3 {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Skill Tags Container */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Individual Skill Tag */
+.skill-tag {
+  background: rgba(99, 102, 241, 0.2);
+  color: #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  cursor: pointer;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+  border-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skills-section {
+    padding: 60px 0;
+  }
+
+  .skills-section .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .skill-card {
+    padding: 25px;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 60px 15px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+/* ================= END SKILLS SECTION ================= */
+
+/* ================= EDUCATION SECTION - HORIZONTAL CARDS ================= */
+/* ================= FEATURED PROJECTS TITLE ================= */
+
+.projects-section {
+  padding: 80px 20px;
+}
+
+.projects-section .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projects-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.projects-line {
+  width: 160px;
+  height: 4px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2.2rem;
+  }
+
+  .projects-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.education-section {
+    padding: 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.education-section .section-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.education-section .section-title h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.education-section .section-subtitle {
+    font-size: 1.3rem;
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+.education-section .line-mf {
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Education Cards - Stacked Vertically */
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Horizontal Card Layout */
+.edu-card {
+    display: flex;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.05));
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid rgba(99, 102, 241, 0.3);
+    transition: all 0.5s ease;
+    position: relative;
+    min-height: 280px;
+}
+
+.edu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 30%, rgba(99, 102, 241, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.edu-card:hover::before {
+    transform: translateX(100%);
+}
+
+.edu-card:hover {
+    border-color: #6366f1;
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.4);
+    transform: translateY(-10px);
+}
+
+/* Left Side - Gradient Header */
+.edu-left {
+    flex: 0 0 380px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.degree-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 6rem;
+    opacity: 0.2;
+    transform: rotate(-15deg);
+}
+
+.degree-info {
+    position: relative;
+    z-index: 1;
+}
+
+.degree-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.3;
+}
+
+.university-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.edu-meta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.meta-item {
+    background: rgba(227, 230, 236, 0.95); /* Much more opaque */
+    backdrop-filter: blur(10px);
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 700; /* Bolder text */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1e293b; /* Dark text on light background */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.gpa-badge {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
+    text-align: center;
+}
+
+/* Right Side - Content */
+.edu-right {
+    flex: 1;
+    padding: 40px 40px 40px 50px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.concentration {
+    background: rgba(99, 102, 241, 0.15);
+    padding: 15px 20px;
+    border-radius: 15px;
+    border-left: 4px solid #6366f1;
+}
+
+.concentration strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+}
+
+.coursework-section {
+    flex: 1;
+}
+
+.coursework-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coursework-title::before {
+    content: '📚';
+    font-size: 1.4rem;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.course-item {
+    background: rgba(99, 102, 241, 0.15);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.course-item:hover {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.highlight-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 15px;
+    background: rgba(99, 102, 241, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.highlight-item:hover {
+    background: rgba(99, 102, 241, 0.15);
+    transform: translateX(10px);
+}
+
+.highlight-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.highlight-text {
+    line-height: 1.6;
+}
+
+.highlight-text strong {
+    color: #ffffff;
+}
+
+/* Second Card Different Gradient */
+.edu-card:nth-child(2) .edu-left {
+    background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+}
+
+.edu-card:nth-child(2) .course-item:hover {
+    background: linear-gradient(135deg, #ec4899, #f97316);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .edu-card {
+        flex-direction: column;
+    }
+
+    .edu-left {
+        flex: none;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        padding: 30px 25px;
+    }
+
+    .edu-right {
+        padding: 30px 25px;
+    }
+
+    .degree-icon {
+        font-size: 4rem;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .degree-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-section .section-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .edu-meta-left {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .course-grid {
+        gap: 8px;
+    }
+
+    .course-item {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+/* ================= END EDUCATION SECTION ================= */
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/

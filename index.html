@@ -32,6 +32,12 @@
 </head>
 
 <body>
+  <div class="bg-animation">
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+  </div>
+  <!-- END OF ANIMATED BACKGROUND -->
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -142,28 +148,29 @@
     <div class="row justify-content-center">
       <div class="col-md-10 text-center">
         <div class="about-me pt-4 pt-md-0">
-          <div class="title-box-2">
-            <h5 class="title-left" style="font-size: 24px; font-weight: bold; color: #000001;">
-              About Me
-            </h5>
+          <!-- About Section Title -->
+          <div class="section-title">
+            <h2 class="about-title">About Me</h2>
+            <p class="about-subtitle">
+              A brief introduction to who I am and what I do
+            </p>
           </div>
-
           <div class="about-me-content" style="font-size: 16px; text-align: center; margin-top: 20px;">
-            <p class="lead" style="line-height: 1.8; color: #495057; margin-bottom: 20px;">
+            <p class="lead" style="line-height: 1.8; color: #ffffff; margin-bottom: 20px;">
               I am currently pursuing a Master's in Computer Science with a concentration in Data Science and Information Security at the University of North Carolina at Charlotte. My journey in technology is driven by curiosity, analytical thinking, and a passion for transforming data into meaningful insights.
 
-            <p class="lead" style="line-height: 1.8; color: #495057; margin-bottom: 20px;">
+            <p class="lead" style="line-height: 1.8; color: #ffffff; margin-bottom: 20px;">
               With a Bachelor's in Computer Science and Engineering from CMR Institute of Technology, I have built a strong foundation in programming, algorithms, and software development. This technical background, combined with my problem-solving mindset, enables me to tackle complex challenges with confidence and creativity.
             </p>
 
-            <p class="lead" style="line-height: 1.8; color: #495057; margin-bottom: 20px;">
+            <p class="lead" style="line-height: 1.8; color: #ffffff; margin-bottom: 20px;">
               During my Data Management Internship at Astute Infocom, I optimized data pipelines using SQL and Python, processed large datasets to enhance accuracy, and collaborated with cross-functional teams to support cloud-based workflows. This hands-on experience solidified my skills in data processing and quality management.
             </p>
 
-            <p class="lead" style="line-height: 1.8; color: #495057; margin-bottom: 20px;">
+            <p class="lead" style="line-height: 1.8; color: #ffffff; margin-bottom: 20px;">
               As a Class Representative at CMR Institute of Technology, I demonstrated leadership by bridging communication between students and faculty, coordinating academic activities, and fostering a collaborative learning environment. I'm also passionate about making technical concepts accessible and have experience in teaching and mentoring.
 
-            <p class="lead" style="line-height: 1.8; color: #495057; margin-bottom: 20px;">
+            <p class="lead" style="line-height: 1.8; color: #ffffff; margin-bottom: 20px;">
               I thrive in dynamic, collaborative environments where innovation and continuous learning drive meaningful results. With a drive to grow and create purposeful impact, I aim to contribute to projects that solve complex problems, deliver measurable outcomes, and make a lasting difference in the world of technology and data science.
             </p>
           </div>
@@ -173,64 +180,123 @@
   </div>
 </section>
 
-<!-- ======= Skills Section ======= -->
-<section id="skills" style="background-color:#f9f9f9;padding:60px 0;">
-  <style>
-    /* Styles for the skills section */
-    #skills h2 {
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 30px;
-    }
-
-    #skills .skills-info {
-      text-align: center;
-    }
-
-    #skills ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 700px; /* keeps the list nicely centered */
-    }
-
-    #skills ul li {
-      margin-bottom: 10px;
-      font-size: 1rem;
-      color: #333;
-      padding: 8px 0;
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    #skills ul li:last-child {
-      border-bottom: none;
-    }
-
-    #skills ul li strong {
-      color: #255bac; /* accent color for skill titles */
-    }
-
-    /* Optional hover effect */
-    #skills ul li:hover {
-      background-color: #f1f5ff;
-    }
-  </style>
-
+ <!-- ======= Skills Section ======= -->
+<section id="skills" class="skills-section">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="skills-info">
-          <h2 style="font-size: 32px; font-weight: 700; color: #222; margin-bottom: 8px;">Skills</h2>
-          <div class="line-mf" style="width: 90px; height: 2.5px; background-color: #0078ff; margin-top: 0px; margin-bottom: 30px;"></div>
-          <ul>
-            <li><strong>Programming & Scripting</strong>: Python, C++, JavaScript</li>
-            <li><strong>Data Analytics & Visualization</strong>: Power BI, Tableau, Pandas, NumPy, Scikit-learn</li>
-            <li><strong>Databases</strong>: MySQL, MongoDB, SQL</li>
-            <li><strong>Cloud & Big Data</strong>: Apache Spark, AWS (Foundational)</li>
-            <li><strong>Technical Areas</strong>: Data Structures & Algorithms, Information Security, Cloud Computing</li>
-            <li><strong>Tools & Platforms</strong>: GitHub, VS Code, Linux, MS Excel, MS PowerPoint</li>
-            <li><strong>Professional Skills</strong>: Communication, Leadership, Collaboration, Time Management</li>
-          </ul>
+    <div class="section-title">
+      <h2>Skills & Expertise</h2>
+      <div class="line-mf"></div>
+      <p class="section-subtitle">Technologies and tools I work with</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Programming -->
+      <div class="skill-card">
+        <div class="skill-icon">💻</div>
+        <h3>Programming</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+        </div>
+      </div>
+
+      <!-- Data Analysis & Querying -->
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <h3>Data Analysis & Querying</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">EDA</span>
+          <span class="skill-tag">Statistical Analysis</span>
+          <span class="skill-tag">Data Cleaning</span>
+          <span class="skill-tag">Feature Engineering</span>
+        </div>
+      </div>
+
+      <!-- Visualization & BI -->
+      <div class="skill-card">
+        <div class="skill-icon">📈</div>
+        <h3>Visualization & BI</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Plotly</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">Dashboard Design</span>
+          <span class="skill-tag">KPI Reporting</span>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skill-card">
+        <div class="skill-icon">🗄️</div>
+        <h3>Databases</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Data Modeling</span>
+          <span class="skill-tag">Query Optimization</span>
+        </div>
+      </div>
+
+      <!-- Cloud & Big Data -->
+      <div class="skill-card">
+        <div class="skill-icon">☁️</div>
+        <h3>Cloud & Big Data</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS S3</span>
+          <span class="skill-tag">AWS Lambda</span>
+          <span class="skill-tag">AWS EC2</span>
+          <span class="skill-tag">Apache Spark</span>
+          <span class="skill-tag">ETL Pipelines</span>
+        </div>
+      </div>
+
+      <!-- Machine Learning -->
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <h3>Machine Learning</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Keras</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Predictive Modeling</span>
+          <span class="skill-tag">Hyperparameter Tuning</span>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms -->
+      <div class="skill-card">
+        <div class="skill-icon">🛠️</div>
+        <h3>Tools & Platforms</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Jupyter Notebook</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">pytest</span>
+          <span class="skill-tag">Agile/Scrum</span>
+        </div>
+      </div>
+
+      <!-- Professional Skills -->
+      <div class="skill-card">
+        <div class="skill-icon">🤝</div>
+        <h3>Professional Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Leadership</span>
+          <span class="skill-tag">Collaboration</span>
+          <span class="skill-tag">Time Management</span>
+          <span class="skill-tag">Problem Solving</span>
         </div>
       </div>
     </div>
@@ -238,49 +304,120 @@
 </section>
 
 
+
     </div><!-- End Counter Section -->
+<!-- ======= Education Section ======= -->
+<section id="education" class="education-section">
+  <div class="section-title">
+    <h2>Education Journey</h2>
+    <div class="line-mf"></div>
+    <p class="section-subtitle">Building expertise through continuous learning</p>
+  </div>
 
-  <section id="portfolio">
+  <div class="education-grid">
+    <!-- Masters Degree -->
+    <div class="edu-card">
+      <div class="edu-left">
+        <div class="degree-icon">🎓</div>
+        <div class="degree-info">
+          <h3 class="degree-title">Master of Science in Computer Science</h3>
+          <p class="university-name">University of North Carolina at Charlotte</p>
+        </div>
+        <div class="edu-meta-left">
+          <span class="meta-item">📅 Aug 2024 – May 2026</span>
+          <span class="gpa-badge">⭐ GPA: 3.80/4.0</span>
+        </div>
+      </div>
 
-  <div class="container">
-    <div class="section-title" style="text-align: center;">
-     <h3 style="font-size: 32px; font-weight: bold; color: #1e1e1e; margin-bottom: 10px;">
-        Education 
-      </h3>
-      <div class="line-mf" style="width: 190px; height: 2.5px; background-color: #0078ff; margin: 0 auto;"></div>
-    </div>
-
-    <!-- Education -->
-    <div class="row">
-      <div class="col-md-12">
-        <h4 class="mb-3">Education</h4>
-        <div class="edu-entry">
-          <h5>Master of Science in Computer Science</h5>
-          <p><strong>University of North Carolina at Charlotte</strong> (Aug 2024 – May 2026, GPA 3.80/4.0)</p>
-          <ul>
-            <li>Concentration: Data Science, Information Security and Privacy</li>
-            <li>Key Coursework: Data Structures & Algorithms, Database Systems, Software System Design, Information Security, Big Data, Visual Analytics, Cloud Computing for Data Analytics, Artificial Intelligence, Computer Networks</li>
-            <li>Building expertise in data-driven decision making, secure system design, and cloud-based analytics</li>
-          </ul>
+      <div class="edu-right">
+        <div class="concentration">
+          <strong>🎯 Concentration:</strong> Data Science, Information Security and Privacy
         </div>
 
-        <div class="edu-entry">
-          <h5>Bachelor of Technology in Computer Science </h5>
-          <p><strong>CMR Institute of Technology, Medchal</strong> (Aug 2020 – May 2024, GPA 7.62/10)</p>
-          <ul>
-            <li>Core foundation in programming, algorithms, data structures, OOP, Operating Systems, DBMS, Computer Networks, Git and Linux. </li>
-            <li>Leadership: Class Representative (2020-2024), Event Coordinator for Illuminate 2022 fest</li>
-            <li>Developed strong problem-solving abilities and collaborative teamwork skills</li>
-          </ul>
+        <div class="coursework-section">
+          <div class="coursework-title">Key Coursework</div>
+          <div class="course-grid">
+            <div class="course-item">Data Structures & Algorithms</div>
+            <div class="course-item">Database Systems</div>
+            <div class="course-item">Software System Design</div>
+            <div class="course-item">Information Security</div>
+            <div class="course-item">Big Data</div>
+            <div class="course-item">Visual Analytics</div>
+            <div class="course-item">Cloud Computing</div>
+            <div class="course-item">Artificial Intelligence</div>
+            <div class="course-item">Computer Networks</div>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">🚀</span>
+            <span class="highlight-text">Building expertise in <strong>data-driven decision making</strong>, secure system design, and cloud-based analytics</span>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Bachelors Degree -->
+    <div class="edu-card">
+      <div class="edu-left">
+        <div class="degree-icon">🎓</div>
+        <div class="degree-info">
+          <h3 class="degree-title">Bachelor of Technology in Computer Science</h3>
+          <p class="university-name">CMR Institute of Technology, Medchal</p>
+        </div>
+        <div class="edu-meta-left">
+          <span class="meta-item">📅 Aug 2020 – May 2024</span>
+          <span class="gpa-badge">⭐ GPA: 7.62/10</span>
+        </div>
+      </div>
+
+      <div class="edu-right">
+        <div class="concentration">
+          <strong>🎯 Core Foundation:</strong> Computer Science & Engineering
+        </div>
+
+        <div class="coursework-section">
+          <div class="coursework-title">Technical Skills</div>
+          <div class="course-grid">
+            <div class="course-item">Programming</div>
+            <div class="course-item">Algorithms</div>
+            <div class="course-item">Data Structures</div>
+            <div class="course-item">OOP</div>
+            <div class="course-item">Operating Systems</div>
+            <div class="course-item">DBMS</div>
+            <div class="course-item">Computer Networks</div>
+            <div class="course-item">Git & Linux</div>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">🏆</span>
+            <span class="highlight-text"><strong>Leadership:</strong> Class Representative (2020-2024), Event Coordinator for Illuminate 2022 fest</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">💡</span>
+            <span class="highlight-text">Developed strong <strong>problem-solving abilities</strong> and collaborative teamwork skills</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Education Section -->
+
     <!-- Projects -->
 <!-- ================= PROJECTS SECTION ================= -->
-<div id="projects">
-  <h1 class="sub-title" style="text-align: center;">Projects</h1>
-  <div class="line-mf" style="width: 190px; height: 2.5px; background-color: #0078ff; margin-top: 0px; margin-bottom: 30px;"></div>
+<div id="projects" class="projects-section">
+ <!-- Section Title -->
+  <div class="section-title">
+    <h2 class="projects-title">Featured Projects</h2>
+    <p class="projects-subtitle">
+      Showcasing my technical expertise and problem-solving skills
+    </p>
+  
+  </div>
 
   <div class="work-list">
 
